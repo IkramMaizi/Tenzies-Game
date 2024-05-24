@@ -115,7 +115,7 @@ function App() {
   
 
   const diceComponets= dice.map(die => (
-    <Die dieNumber={die.value} holdDie={holdDie} dieIndex={die.index} isHold={die.isHold}/>
+    <Die dieNumber={die.value} holdDie={holdDie} dieIndex={die.index} isHold={die.isHold} length={dice.length}/>
      ))
 
   
@@ -125,7 +125,7 @@ function App() {
     
     <div className="App">
     
-      {gameCompleted && <Confetti recycle={false}/>}
+      {gameCompleted && <Confetti width={window.innerWidth} recycle={false}/>}
         <h2 className="title">
           Tenzies Game!
         </h2>
